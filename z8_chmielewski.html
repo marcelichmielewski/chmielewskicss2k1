@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Wewnętrzny arkusz stylów</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- Marceli Chmielewski 06.04.2022 -->
+</head>
+<body>
+<h1 align="center"> Wewnętrzny arkusz stylów </h1>
+<h1> 1. Gdzie jest wstawiany?  </h1>
+<p>  Wstawia się zawsze w części nagłówkowej dokumentu (pomiędzy znacznikami &lthead&gt a &lt/head&gt). Można go zastosować, gdy elementy które pragniemy poddać formatowaniu, występują wielokrotnie na stronie i wszystkim chcemy nadać takie same atrybuty (inne niż domyślne). </p>
+<h1> 2. Składnia teoretyczna:  </h1>
+<fieldset>
+&lthead&gt <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp (...) <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &ltstyle type="text/css"&gt <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/* &lt![CDATA[ */ <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp selektor1 { cecha: wartość; cecha2: wartość2... } <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp selektor2 { cecha: wartość; cecha2: wartość2... } <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp (...) <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp /* ]]&gt */ <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &lt/style&gt <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp (...) <br>
+&lt/head&gt
+</fieldset>
+<h1> 3. Jakie mogą być selektory?  </h1>
+<p>  Selektorem może być praktycznie dowolny znacznik, np. p (akapit), h1 (tytuł), td (komórka tabeli) i inne. To właśnie elementom, które znajdują się w kodzie źródłowym, pomiędzy tymi znacznikami, nadajemy atrybuty formatowania opisane w arkuszu. </p>
+<h1> 4. Jakie mogą być cechy i wartości?  </h1>
+<p> Jako "cecha" (w deklaracji stylu - powyżej) należy wpisać o jakie konkretnie atrybuty formatowania nam chodzi (opisane w kolejnych rozdziałach). Natomiast jako wyraz "wartość" wpisujemy dokładną wartość atrybutu. Zwróć uwagę, że jednemu selektorowi możemy nadać kilka atrybutów (cech). Są one wtedy rozdzielone średnikami.  </p>
+</body>
+</html>
